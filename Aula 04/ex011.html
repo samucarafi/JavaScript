@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Identificação de Nacionalidade</h1>
+    Qual seu pais? <input type="text" id="pais"> <input type="button" value="confirmar" onclick="resultado()">
+    <div id="res">
+
+    </div>
+    <script>
+        function resultado(){
+      var pais = window.document.getElementById("pais")
+      var res = window.document.getElementById("res")
+      var país =pais.value.toUpperCase()
+      res.innerHTML=`<p> Você está vivendo em ${país} </p>`
+      if (país=="BRASIL"){
+       res.innerHTML += " <p> Você é Brasileiro </p>"
+      } else{
+        res.innerHTML += "<p> Você é estrangeiro </p>"
+      }
+        } 
+    </script>
+</body>
+</html>
