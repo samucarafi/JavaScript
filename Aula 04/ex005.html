@@ -16,10 +16,15 @@
     <h1>Iniciando estudos com DOM</h1>
     <P>Aqui vai o resultado</P>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id='msg'>Clique em mim</div>
     
     <script>
-        window.document.write('Olá Mundo!')
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName ('p') [0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.background='green' 
+        //ou window.document.getElementByID ('msg').style.backgroud ='green' se não for declarado uma var
     </script>
 </body>
 </html>
