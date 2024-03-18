@@ -5,4 +5,4 @@ function parimp (n) {
     return 'ímpar'
   }
 }
-let res = parimp (11)
+console.log (parimp(4))
