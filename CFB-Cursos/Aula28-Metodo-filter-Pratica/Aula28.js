@@ -36,9 +36,10 @@ const radioSelecionado=()=>{
 
 btnCursoSelecionado.addEventListener('click',(evt)=>{
     const rs=radioSelecionado()
-    if(rs==undefined){alert('Nenhum Curso Selecionado')}
-    const cursoSelecionado= rs.parentNode.previousSibling.textContent
-    alert('Curso selecionado '+ cursoSelecionado)
+    try{const cursoSelecionado= rs.parentNode.previousSibling.textContent 
+    alert('Curso selecionado '+ cursoSelecionado)} catch{
+        alert('Nenhum Curso Selecionado')//try e catch utilizado da mesma forma que o if anteriomente, tenta encontrar o curso selecionado, caso dê erro significa que não foi selecionado um curso, logo cria um alerta para selecionar.
+    }
 
 })
 
