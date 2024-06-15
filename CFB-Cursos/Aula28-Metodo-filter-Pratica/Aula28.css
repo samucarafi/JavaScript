@@ -57,3 +57,21 @@ button{
 
     cursor: pointer;
 }
+.caixaFuncionalidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.comandos{
+    width:30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#caixaNovoCurso input{
+    margin:10px;
+    padding: 5px;
+}
