@@ -17,6 +17,9 @@ button{
     cursor: pointer;
     border-radius: 10px;
 }
+#btnAdicionarNovoCursoAntes{
+    margin-bottom: 10px;
+}
 .curso{
     display: flex;
     justify-content: space-around;
