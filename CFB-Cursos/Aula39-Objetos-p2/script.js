@@ -18,7 +18,7 @@ class Carro{
     }
 
     //-----------------------------
-    getNome(){// metodo get para retorna o nome dos objetos c1 c2 c3 ou c4
+    getNome(){// metodo entitulado de getNome para retorna o nome dos objetos c1 c2 c3 ou c4 
         return this.nome
     }
     getTipo(){
@@ -33,7 +33,7 @@ class Carro{
     }
     //--------------------------------------
     
-    setNome(nome){//metodo (set) para trocar o nome dos objetos 
+    setNome(nome){//método para trocar o nome dos objetos 
         this.nome=nome
     }
 
