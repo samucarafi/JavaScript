@@ -31,9 +31,11 @@ class Militar extends Carro{//a class filho (militar) herdará todos elementos d
     }
 }
 class Utilitario extends Carro{
-    
+    constructor(nome,portas,lugares){
+        super(nome,portas)
+        this.lugares=lugares
+    }
 }
-
 
 const c1=new Carro('Normal',4)
 c1.ligar()//ligar carro normal
