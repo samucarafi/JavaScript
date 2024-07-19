@@ -45,6 +45,8 @@ const c2=new Militar('Lutador',1,100,50)
 c2.atirar()//executar função atirar reduzindo a quantidade de munições
 c2.atirar()
 
+const c3=new Utilitario('Fiat',2,5)
+
 //------------------c1---------------------------------------------
 console.log(`Nome: ${c1.nome}`)
 console.log(`Portas: ${c1.portas}`)
@@ -61,3 +63,10 @@ console.log(`Velocidade: ${c2.vel}`)
 console.log(`Blindagem: ${c2.blindagem}`)
 console.log(`Munição: ${c2.municao}`)
 console.log(`Cor: ${c2.cor}`)
+
+//-----------------c3------------------------------------
+console.log(`Nome: ${c3.nome}`)
+console.log(`Portas: ${c3.portas}`)
+console.log(`Ligado: ${(c3.ligado?'Sim':'Não')}`)
+console.log(`Velocidade: ${c3.vel}`)
+console.log(`Lugares: ${c3.lugares}`)
