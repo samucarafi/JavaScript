@@ -10,7 +10,7 @@ btn_c.map((el)=>{//percorrer todos elementos div curso
     el.appendChild(btn_lixeira)//atribuido uma imagem de lixeira a cada elemento div curso
     
     btn_lixeira.addEventListener('click',(evt)=>{//atribuir evento de click na lixeira
-        caixa1.removeChild(evt.target.parentNode)//ao clicar na lixeira sera retivada da caixa 1 seu respectivo filho correspondente ao pai da lixeira, representada por evt.target.parentNode
+        caixa1.removeChild(evt.target.parentNode)//ao clicar na lixeira sera retirada da caixa 1 seu respectivo filho correspondente ao pai da lixeira, representada por evt.target.parentNode
     })    
 
 })

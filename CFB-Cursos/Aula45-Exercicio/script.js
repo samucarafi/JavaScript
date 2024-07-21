@@ -22,33 +22,30 @@ f_tipoNormal.addEventListener('click',()=>{
     console.log('teste')
 })
 
-const gerenciarExibicaoCarros=(c)=>{
+const gerenciarExibicaoCarros=()=>{
+    carros.innerHTML=''
+    a_carros.forEach((c)=>{//percorrer o array carros
+        
         const div=document.createElement('div')//criar elemento div
         div.setAttribute('class','carro')//atribuir class com nome carro
-        if (f_tipoNormal.checked) {
-            div.innerHTML=`-Normal- <br>`
-            div.innerHTML+=`Nome: ${c.nome}<br>`
-            div.innerHTML+=`Portas: ${c.portas}`
-        }else{
-        div.innerHTML="-Militar-<br>"
         div.innerHTML+=`Nome: ${c.nome} <br>`//escrever na div o nome dos carros
         div.innerHTML+=`Portas: ${c.portas} <br>`//escrever na div quantidade de portas
         div.innerHTML+=`Blindagem: ${c.blindagem} <br>`//escrever na div quantidade de portas
         div.innerHTML+=`Munição: ${c.municao} <br>`//escrever na div quantidade de portas
-        }
-    a_carros.push(div)
-    carros.appendChild(div)//atribuir a div criada a div com id carros
+        carros.appendChild(div)//atribuir a div criada a div com id carros
+    })
 }
 
 
 btn_addCarro.addEventListener('click',()=>{
     if(f_tipoNormal.checked){
         const c=new Carro(f_nome.value,f_portas.value)//cria um carro(objeto), passando os valores de nome e portas do input
-        gerenciarExibicaoCarros(c)
+        a_carros.push(c)//adiciona o carro ao array carros
     }else{
         const c=new Militar(f_nome.value,f_portas.value,f_blindagem.value,f_municao.value)
-        gerenciarExibicaoCarros(c)
+        a_carros.push(c)
     }
+    gerenciarExibicaoCarros()//executa função de percorrer o array, criar div com nome dos carros no resultado
 
     //depois de adicionar zerar todos valores 
     f_nome.value=''
