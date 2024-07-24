@@ -10,16 +10,16 @@
     padding: 0px;
 }
 body{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 15px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 main{
     background-color: var(--Cream);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 96%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@ main{
     background-color: var(--White);
     border-radius: 10px;
 }
-#quadrado div{
+#quadrado >div{
     border-radius: 10px 10px 0px 0px;
 }
 #imagem{
@@ -48,16 +48,18 @@ main{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    padding: 10px; 
 }
-#texto div {
+#texto>div{
+    padding: 40px;
+}
+#valores {
     display: flex;
     width: 100%;
     height: 40px;
 }
-#texto div p{
-    width: 50%;
+#valores p{
     display: flex;
+    padding-right: 10px;
     align-items: center;
     font-family: "Fraunces", serif;
     font-optical-sizing: auto;
@@ -68,15 +70,16 @@ main{
 }
 #atual{
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--DarkCyan);
 }
 #antigo{
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: line-through;
 }
 button{
     color:white;
+    width: 100%;
     background-color:var(--DarkCyan);
     margin: 5px;
     padding: 10px 0px;
@@ -85,19 +88,28 @@ button{
     font-optical-sizing: auto;
     font-style: normal;
 }
-@media screen and (min-width: 450px){
+@media screen and (min-width: 700px){
     
     #quadrado{
     flex-direction: row;
     width: 600px;
-    height: 370px;
+    height: 450px;
     background-color: var(--White);
     border-radius: 10px;
     }
-    #quadrado div{
+    #quadrado > div{
     width: 50%;
     height: 100%;
     border-radius: 10px 0px 0px 10px;
     }
-    #texto div
+    #atual{
+        font-weight: 900;
+        font-size: 1.6rem;
+        color: var(--DarkCyan);
+    }
+    #antigo{
+        justify-content: center;
+        font-size: 1rem;
+        text-decoration: line-through;
+    }
 }
