@@ -4,8 +4,6 @@
 --Verydarkblue: hsl(212, 21%, 14%);
 --Darkgrayishblue: hsl(228, 12%, 48%);
 --White: hsl(0, 0%, 100%);
---montserrat: Montserrat;
---fraunces: Fraunces;
 }
 *{
     margin: 0px;
@@ -28,24 +26,29 @@ main{
 }
 #quadrado{
     display: flex;
-    width: 500px;
-    height: 400px;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
     background-color: var(--White);
     border-radius: 10px;
 }
 #quadrado div{
-    width: 50%;
-    height: 100%;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 #imagem{
     background-image: url(images/image-product-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 50%;
+    width: 100%;
 }
 #texto {
     display: flex;
     flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 10px; 
 }
 #texto div {
     width: 100%;
@@ -53,13 +56,51 @@ main{
 }
 #texto div p{
     display: inline;
-    font-family: Fraunces;
-    font-weight: 700;
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
 }
 #atual{
+    font-weight: 900;
     font-size: 2rem;
+    color: var(--DarkCyan);
 }
 #antigo{
     font-size: 1rem;
     text-decoration: line-through;
+}
+button{
+    color:white;
+    background-color:var(--DarkCyan);
+    margin: 5px;
+    padding: 10px 0px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+@media screen and (min-width: 450px){
+    
+    #quadrado{
+    flex-direction: row;
+    width: 500px;
+    height: 370px;
+    background-color: var(--White);
+    border-radius: 10px;
+    }
+    #quadrado div{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    }
+    #texto div {
+        width: 35%;
+        height: 40px;
+    }
+    button{
+        margin-top: 20px;
+    }
 }
