@@ -1,5 +1,22 @@
-class Carro{//objeto Carro
+//Abstract diz respeito a uma class que não pode ser instanciada, so serve de base para outras classes, so pode ser herdadas a outras classes
+
+class CarroPadrao{
+    constructor(){
+        if(this.constructor===CarroPadrao){//essa condição torna a classe abstract, dando erro ao tentar instancia-la
+            throw new TypeError('Esta classe não pode ser instânciada')
+        }
+        if(this.ligar===undefined){//condição que obriga filhos desta classe a implementar o método ligar
+            throw new TypeError('É obrigatório implementar o método ligar')
+        }
+        this.rodas=4
+        this.portas=4
+        this.ligado=false
+    }
+}
+
+class Carro extends CarroPadrao{//objeto Carro que herda a class abstract carro padrão
     constructor(tipo,estagioTurbo){
+        super()//herdar
         this.turbo=new Turbo(estagioTurbo)//novo parametro com a class Turbo atribuida abaixo
         if(tipo==1){
             this.velMax=120
@@ -17,7 +34,14 @@ class Carro{//objeto Carro
         console.log(this.nome)
         console.log(this.velMax)
         console.log(this.turbo)
+        console.log(this.rodas)
+        console.log(this.portas)
+        console.log(this.ligado)
         console.log('----------------------------')
+    }
+
+    ligar(){//se não tivesse essa implementação daria erro
+        this.ligado=true
     }
 }
 
@@ -50,9 +74,10 @@ class CarroEspecial extends Carro{//CarroEspecial herda atributos do Carro
     }
 }
 
-const c1=new Carro(1,0)
+const c1=new Carro(1,0)//instanciando Carro, o Carropadrao não pode ser por ser abstract
 const c2=new Carro(1,1)
 const c3=new CarroEspecial(3)
+//const c4=new CarroPadrao() daria erro porser abstract
 
 c1.info()
 c2.info()
