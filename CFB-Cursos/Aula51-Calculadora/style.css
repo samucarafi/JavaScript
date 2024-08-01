@@ -4,19 +4,68 @@
     border: none;
     box-sizing: border-box;
     font-size: large;
+    
+}
+.dflex{
 }
 .calc{
-
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eee;
+    border: 3px solid #bbb;
+    width: 230px;
+    border-radius:5px ;
+    margin: 5px;
 }
 .div_nome{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
 
 }
-.div_display{
 
-}
 .div_teclas{
-
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    flex-wrap: wrap;
 }
-.teclas{
-    
+
+.tecla{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    border: 3px solid #888;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.teclaOp{
+    background-color: #f44 !important;
+    border-color: #800 !important;
+}
+
+.div_display{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+}
+#display{
+    background-color: #8a8;
+    width: 220px;
+    text-align: right;
+    padding: 5px;
+    font-family: monospace;
+    font-size: larger;
 }
